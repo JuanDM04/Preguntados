@@ -8,7 +8,7 @@ export default function Pregunta({ categoria, onResponder, onVolver }) {
   const [tiempo, setTiempo] = useState(15)
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/pregunta/${categoria}`)
+    axios.get(`https://preguntados-production.up.railway.app/api/pregunta/${categoria}`)
       .then(r => setPregunta(r.data))
       .catch(() => setPregunta(null))
   }, [categoria])
